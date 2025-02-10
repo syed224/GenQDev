@@ -6,6 +6,31 @@ import * as schema from "../db/schema";
 
 import { dataToInsert } from "@/constants";
 
+import { badges } from "@/db/schema";
+
+const initialBadges = [
+  {
+    name: "Newcomer Badge",
+    description: "Earn this by completing 3 lessons",
+    requiredLessons: 3,
+    imageUrl: "/new-badge.svg"
+  },
+  {
+    name: "Rising Star Badge",
+    description: "Earn this by completing 10 lessons",
+    requiredLessons: 10,
+    imageUrl: "/risingstar-badge.svg"
+  }
+];
+
+export const seedBadges = async () => {
+  for (const badge of initialBadges) {
+    await db.insert(badges).values(badge).onConflictDoNothing();
+  }
+};
+
+seedBadges();
+
 const sql = neon(process.env.DATABASE_URL!);
 
 const db = drizzle(sql, { schema });
@@ -33,6 +58,22 @@ const db = drizzle(sql, { schema });
     await db
       .insert(schema.challengeOptions)
       .values(dataToInsert.challengeOptions);
+    
+      await db.insert(badges).values([
+        {
+          name: "Newcomer Badge",
+          description: "Complete 3 lessons",
+          requiredLessons: 3,
+          imageUrl: "/img/icon/newcomer-badge.svg",
+        },
+        {
+          name: "Rising Star Badge",
+          description: "Complete 10 lessons",
+          requiredLessons: 10,
+          imageUrl: "/img/icon/risingstar-badge.svg",
+        },
+      ]);
+        
 
     console.log("Seeding finished");
   } catch (error) {

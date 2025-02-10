@@ -42,11 +42,16 @@ export const sidebarItems = [
     label: "Shop",
     iconSrc: "/img/icon/shop.svg",
   },
-  //   {
-  //     link: "/advance",
-  //     label: "More",
-  //     iconSrc: "/img/more.svg",
-  //   },
+  {
+    link: "/badge",
+      label: "Achievement",
+    iconSrc: "/achievement.svg",
+  },
+  {
+    link: "/advance",
+      label: "More",
+    iconSrc: "/img/more.svg",
+  },
 ];
 
 export const quests = [
@@ -285,3 +290,9 @@ export const dataToInsert = {
     },
   ],
 };
+
+export const badges = {
+  NEWCOMER: { name: "Newcomer", description: "Complete 3 lessons", icon: "/img/icon/new-badge.svg" },
+  RISING_STAR: { name: "Rising Star", description: "Complete 10 lessons", icon: "/img/icon/risingstar-badge.svg" },
+};
+

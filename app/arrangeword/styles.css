@@ -1,0 +1,84 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.container{
+  @apply text-center w-full flex flex-col justify-center sm:w-full px-4 min-h-screen overflow-y-auto pt-20 mb-10 sm:mb-0 sm:pt-24 pb-28 sm:pb-32
+}
+
+/* question */
+.question {
+  @apply text-4xl sm:text-5xl font-bold mb-6;
+}
+
+
+/* answer zones */
+.dropzones {
+  @apply flex justify-center gap-1 mb-6 flex-wrap;
+}
+
+/* Add bounce-in animation keyframe */
+@keyframes bounceIn {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes bounceInText {
+  0% {
+    transform: translateY(-50px);
+    /* Start position off-screen */
+    opacity: 0;
+  }
+
+  60% {
+    transform: translateY(10px);
+    /* Slight bounce up */
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateY(0);
+    /* Settle to original position */
+  }
+}
+
+.dropzone span {
+  animation: bounceInText 0.6s ease-out;
+  /* Apply the bounce-in animation to text */
+}
+
+/* Apply bounce-in animation to your dropzone */
+.dropzone {
+  @apply w-24 h-20 text-4xl sm:text-5xl text-gray-700 border-solid border-4 border-[#ffc23d] bg-blue-400 rounded flex items-center justify-center transition-colors duration-300;
+  animation: bounceIn 0.6s ease-out;
+  /* Apply the animation */
+}
+
+
+/* alphabet option */
+.letters {
+  @apply flex justify-center gap-4 flex-wrap;
+}
+
+/* Ensure the letters are centered */
+.letter {
+  @apply w-20 h-14 py-4 px-5 border text-3xl sm:text-4xl bg-gray-200 rounded flex items-center justify-center cursor-grab transition-all duration-300 hover:bg-pink-500 hover:scale-110;
+}
+
+
+
+
+

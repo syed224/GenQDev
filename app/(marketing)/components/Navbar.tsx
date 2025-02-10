@@ -24,9 +24,9 @@ const Navbar = () => {
             height={70}
           />
           {/* If you want to put some key word here please un comment the below line */}
-          {/* <h1 className="text-2xl font-extrabold text-yellow tracking-wide">
+          { <h1 className="text-2xl font-extrabold text-black tracking-wide">
             Gen-Q
-          </h1> */}
+          </h1> }
         </div>
 
         <ClerkLoading>

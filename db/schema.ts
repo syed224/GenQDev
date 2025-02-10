@@ -147,3 +147,29 @@ export const userSubscription = pgTable("user_subscription", {
   stripePriceId: text("stripe_price_id").notNull(),
   stripeCurrentPeriodEnd: timestamp("stripe_current_period_end").notNull(),
 });
+
+
+export const todo = pgTable("todo", {
+  id: integer("id").primaryKey(),
+  text: text("text").notNull(),
+  done: boolean("done").default(false).notNull(),
+});
+
+export const badges = pgTable("badges", {
+  id: serial("id").primaryKey(),
+  name: text("name").notNull(),
+  description: text("description"),
+  requiredLessons: integer("required_lessons").notNull(),
+  imageUrl: text("image_url").notNull()
+});
+
+export const userBadges = pgTable("user_badges", {
+  id: serial("id").primaryKey(),
+  userId: text("user_id").notNull(),
+  badgeId: integer("badge_id").references(() => badges.id),
+  earnedAt: timestamp("earned_at").defaultNow()
+});
+
+export const badgesRelations = relations(badges, ({ many }) => ({
+  userBadges: many(userBadges)
+}));

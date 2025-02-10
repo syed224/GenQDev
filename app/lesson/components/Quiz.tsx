@@ -192,7 +192,7 @@ export const Quiz: FC<QuizProps> = ({
             className="size-12 lg:size-24"
           />
 
-          <h1 className="text-xl lg:text-3xl text-neutral-700 font-bold">
+          <h1 className="text-xl lg:text-3xl text-[color:var(--foreground)] font-bold">
             Great job ! <br /> You've completed the lesson..
           </h1>
 
@@ -228,7 +228,7 @@ export const Quiz: FC<QuizProps> = ({
       <div className="flex-1">
         <div className="h-full flex items-center justify-center">
           <div className="lg:min-h-[350px] lg:w-[600px] w-full px-6 lg:px-0 flex flex-col gap-y-12">
-            <h1 className="text-4xl lg:text-3xl text-center lg:text-start font-bold text-neutral-700">
+            <h1 className="text-4xl lg:text-3xl text-center lg:text-start font-bold text-[color:var(--foreground)]">
               {currentChallenge.type === "ASSIST"
                 ? "Tap the correct answer"
                 : currentChallenge.question}

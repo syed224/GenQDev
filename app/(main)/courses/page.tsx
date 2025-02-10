@@ -18,7 +18,7 @@ const CoursesPage = async () => {
 
   return (
     <main className="h-full max-w-[912px] px-3 mx-auto">
-      <h1 className="text-2xl mt-5 mb-5 font-bold text-neutral-700">
+      <h1 className="text-2xl mt-5 mb-5 font-bold text-[color:var(--foreground)]">
         I want to learn...
       </h1>
 

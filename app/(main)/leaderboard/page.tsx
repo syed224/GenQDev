@@ -16,7 +16,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Separator } from "@/components/ui/separator";
 
 export const metadata = {
-  title: "genq | Leaderboard page",
+  title: "GenQ | Leaderboard page",
   description: "See where you stand among other learners in the community.",
 };
 
@@ -43,13 +43,13 @@ const LeaderBoardPage = async () => {
       <FeedWrapper>
         <div className="w-full flex flex-col items-center">
           <Image
-            src="img/leaderboard1.svg"
+            src="/leaderboard.svg"
             alt="Leaderboard"
             height={90}
             width={90}
           />
 
-          <h1 className="text-center font-bold text-neutral-800 text-2xl my-6">
+          <h1 className="text-center font-bold text-[color:var(--foreground)] text-2xl my-6">
             Leaderboard
           </h1>
 
@@ -79,7 +79,7 @@ const LeaderBoardPage = async () => {
                   />
                 </Avatar>
 
-                <p className="font-bold text-neutral-800 flex-1 flex gap-x-1 items-center">
+                <p className="font-bold text-[color:var(--foreground)] flex-1 flex gap-x-1 items-center">
                   {userProgress.userName}
                   {subscribedUser && (
                     <Image

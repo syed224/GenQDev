@@ -2,10 +2,11 @@ import { MobileSidebar } from "@/components/MobileHeader";
 import { Sidebar } from "@/components/Sidebar";
 import { ClerkLoaded, ClerkLoading, UserButton } from "@clerk/nextjs";
 import { Loader } from "lucide-react";
+import { DarkModeProvider } from "@/components/DarkModeContext";
 
 const MainLayout = ({ children }: { children: React.ReactNode }) => {
   return (
-    <>
+    <DarkModeProvider>
       <MobileSidebar />
       <Sidebar className="hidden lg:flex" />
       <main className="lg:ml-[256px] h-full pt-12 lg:pt-0">
@@ -23,7 +24,8 @@ const MainLayout = ({ children }: { children: React.ReactNode }) => {
           <UserButton afterSignOutUrl="/" />
         </ClerkLoaded>
       </section>
-    </>
+    </DarkModeProvider>
   );
 };
+
 export default MainLayout;

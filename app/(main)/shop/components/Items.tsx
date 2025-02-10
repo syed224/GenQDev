@@ -46,7 +46,7 @@ const Items = ({ hearts, points, hasActiveSubscription }: Props) => {
         <Image src="/heart.svg" alt="Heart" width={60} height={60} />
 
         <div className="flex-1">
-          <p className="text-neutral-700 text-base lg:text-xl font-bold">
+          <p className="text-[color:var(--foreground)] text-base lg:text-xl font-bold">
             Refill heart
           </p>
         </div>
@@ -58,7 +58,7 @@ const Items = ({ hearts, points, hasActiveSubscription }: Props) => {
           {hearts === 5 ? (
             "full"
           ) : (
-            <div className="flex items-center">
+            <div className="text-[color:var(--foreground)] flex items-center" >
               <Image src="/points.svg" alt="Points" height={20} width={20} />
 
               <p>100</p>
@@ -67,11 +67,11 @@ const Items = ({ hearts, points, hasActiveSubscription }: Props) => {
         </Button>
       </li>
 
-      {/* <li className="flex items-center w-full p-4 pt-8 gap-x-4 border-t-2">
+      { <li className="flex items-center w-full p-4 pt-8 gap-x-4 border-t-2">
         <Image src="/unlimited.svg" alt="Unlimited" height={60} width={60} />
 
         <div className="flex-1">
-          <p className="text-neutral-700 text-base lg:text-xl font-bold">
+          <p className="text-[color:var(--foreground)] text-base lg:text-xl font-bold">
             Unlimited Hearts
           </p>
         </div>
@@ -79,7 +79,7 @@ const Items = ({ hearts, points, hasActiveSubscription }: Props) => {
         <Button disabled={pending} onClick={handleUpgrade}>
           {hasActiveSubscription ? "settings" : "upgrade"}
         </Button>
-      </li> */}
+      </li> }
     </ul>
   );
 };
