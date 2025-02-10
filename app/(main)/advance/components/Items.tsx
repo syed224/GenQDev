@@ -62,7 +62,7 @@ const Items = ({ hearts, points, hasActiveSubscription }: Props) => {
         />
         <div className="flex-1">
           <p className="text-[color:var(--foreground)] text-base lg:text-xl font-bold">
-            DARK MODE
+            Dark Mode
           </p>
         </div>
         <Button onClick={toggleDarkMode}>
@@ -71,6 +71,25 @@ const Items = ({ hearts, points, hasActiveSubscription }: Props) => {
           </div>
         </Button>
       </li>
+
+      {/* ArrangeWord Alip */}
+      <li className="flex items-center w-full p-4 gap-x-4 border-t-2">
+        <Image src="/arrange.svg" alt="Heart" width={60} height={60} />
+        <div className="flex-1">
+          <p className="text-[color:var(--foreground)] text-base lg:text-xl font-bold">
+            Arrange Word
+          </p>
+        </div>
+        <Link href="/arrangeword">
+          <Button>
+            <div className="flex items-center">
+              <Image src="/points.svg" alt="Points" height={20} width={20} />
+              <p>Start Now</p>
+            </div>
+          </Button>
+        </Link>
+      </li>
+
     </ul>
   );
 };

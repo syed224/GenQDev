@@ -8,6 +8,8 @@ import { Toaster } from "sonner";
 import ExitModal from "@/components/Modals/ExitModal";
 import HeartsModal from "@/components/Modals/HeartsModal";
 import PracticeModal from "@/components/Modals/PracticeModal";
+import { DarkModeProvider } from "@/components/DarkModeContext";
+import type { AppProps } from "next/app";
 
 import "./globals.css";
 
@@ -38,6 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <DarkModeProvider>
     <ClerkProvider
       appearance={{
         variables: {
@@ -55,5 +58,6 @@ export default function RootLayout({
         </body>
       </html>
     </ClerkProvider>
+    </DarkModeProvider>
   );
 }
