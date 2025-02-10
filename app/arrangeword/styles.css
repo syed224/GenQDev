@@ -62,7 +62,7 @@
 
 /* Apply bounce-in animation to your dropzone */
 .dropzone {
-  @apply w-24 h-20 text-4xl sm:text-5xl text-gray-700 border-solid border-4 border-[#ffc23d] bg-blue-400 rounded flex items-center justify-center transition-colors duration-300;
+  @apply w-24 h-20 text-4xl sm:text-5xl text-[color:var(--foreground)] border-solid border-4 border-[#ffc23d] bg-blue-400 rounded flex items-center justify-center transition-colors duration-300;
   animation: bounceIn 0.6s ease-out;
   /* Apply the animation */
 }
@@ -70,12 +70,12 @@
 
 /* alphabet option */
 .letters {
-  @apply flex justify-center gap-4 flex-wrap;
+  @apply flex justify-center gap-4 flex-wrap ;
 }
 
 /* Ensure the letters are centered */
 .letter {
-  @apply w-20 h-14 py-4 px-5 border text-3xl sm:text-4xl bg-gray-200 rounded flex items-center justify-center cursor-grab transition-all duration-300 hover:bg-pink-500 hover:scale-110;
+  @apply w-20 h-14 py-4 px-5 border text-3xl sm:text-4xl text-[color:var(--foreground)] rounded flex items-center justify-center cursor-grab transition-all duration-300 hover:bg-pink-500 hover:scale-110;
 }
 
 
