@@ -65,7 +65,7 @@ export const Unit: FC<UnitsProps> = ({
         background={background}
       />
 
-      <div className="flex items-center flex-col relative">
+      <div className="flex items-center flex-col relative ">
         {lessons.map((lesson, i) => {
           const isCurrent = lesson.id === activeLesson?.id;
           const isLocked = !lesson.completed && !isCurrent;

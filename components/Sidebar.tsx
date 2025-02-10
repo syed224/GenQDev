@@ -30,9 +30,9 @@ export const Sidebar = ({ className }: Props) => (
           width={100}
           height={100}
         />
-        {/* <h1 className="text-2xl font-extrabold text-green-600 tracking-wide">
-          genq
-        </h1> */}
+        <h1 className="text-2xl font-extrabold text-white tracking-wide">
+          GenQ
+        </h1> 
       </div>
     </Link>
 
@@ -52,7 +52,7 @@ export const Sidebar = ({ className }: Props) => (
       {/* <DownloadAppButton /> */}
     </div>
 
-    {/* <div className="py-4 px-2 flex justify-between items-center">
+    {/*  <div className="py-4 px-2 flex justify-between items-center">
       <ClerkLoading>
         <Loader className="w-5 h-5 text-muted-foreground animate-spin" />
       </ClerkLoading>

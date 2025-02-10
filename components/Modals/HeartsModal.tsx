@@ -35,9 +35,9 @@ const HeartsModal = () => {
           <DialogTitle className="text-center font-bold text-2xl">
             You ran out of hearts !
           </DialogTitle>
-          {/* <DialogDescription className="text-center text-base">
+          { <DialogDescription className="text-center text-base">
             Get pro for unlimited hearts, or purchase them in the store.
-          </DialogDescription> */}
+          </DialogDescription> }
           <DialogDescription className="text-center text-base">
             Get pro for unlimited hearts, or purchase them in the store.
           </DialogDescription>

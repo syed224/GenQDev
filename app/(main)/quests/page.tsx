@@ -10,7 +10,7 @@ import { Progress } from "@/components/ui/progress";
 import { quests } from "@/constants";
 
 export const metadata = {
-  title: "Lingo | Quests page",
+  title: "GenQ | Quests page",
   description: "Complete quests by earning points.",
 };
 
@@ -29,13 +29,13 @@ const QuestsPage = async () => {
     <main className="flex gap-12 px-6">
       <FeedWrapper>
         <div className="w-full flex flex-col items-center">
-          <Image src="/img/quests.svg" alt="Quests" height={90} width={90} />
+          <Image src="/quests.svg" alt="Quests" height={90} width={90} />
 
-          <h1 className="text-center font-bold text-neutral-800 text-2xl my-6">
+          <h1 className="text-center font-bold text-[color:var(--foreground)] text-2xl my-6">
             Quests
           </h1>
 
-          <p className="text-muted-foreground text-center text-lg mb-6">
+          <p className="text-[color:var(--foreground)] text-center text-lg mb-6">
             Complete quests by earning points.
           </p>
 
@@ -56,7 +56,7 @@ const QuestsPage = async () => {
                   />
 
                   <div className="flex flex-col gap-y-2 w-full">
-                    <p className="text-neutral-700 text-xl font-bold">
+                    <p className="text-[color:var(--foreground)] text-xl font-bold">
                       {quest.title}
                     </p>
 
