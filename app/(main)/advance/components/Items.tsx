@@ -83,7 +83,6 @@ const Items = ({ hearts, points, hasActiveSubscription }: Props) => {
         <Link href="/arrangeword">
           <Button>
             <div className="flex items-center">
-              <Image src="/points.svg" alt="Points" height={20} width={20} />
               <p>Start Now</p>
             </div>
           </Button>

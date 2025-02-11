@@ -24,9 +24,9 @@ const Footer: FC<FooterProps> = ({
   return (
     <footer
       className={cn(
-        "fixed bottom-0 left-0 w-full border-t-2 text-[color:var(--foreground)] py-6 px-4 z-10 rounded-lg",
+        "fixed bottom-0 left-0 w-full border-t-2 bg-white dark:bg-[#404040] text-white dark:text-black py-6 px-4 z-10 rounded-lg ",
         status === "correct" && "bg-green-100",
-        status === "wrong" && "bg-red-100"
+        status === "wrong" && "bg-red-100",
       )}
     >
       {/* Force row layout for both mobile & desktop */}
